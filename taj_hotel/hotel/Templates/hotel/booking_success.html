@@ -1,0 +1,128 @@
+<!-- hotel/templates/hotel/booking_success.html -->
+{% extends 'hotel/base.html' %}
+{% load static %}
+{% block content %}
+<div class="text-center" data-aos="fade-up">
+  <h2>🎉 Booking Confirmed!</h2>
+  <p>Thank you, {{ name }}. Your stay is confirmed from <strong>{{ check_in }}</strong> to <strong>{{ check_out }}</strong>.</p>
+
+<!-- Receipt Box -->
+<div id="receipt" class="receipt-box p-4 my-4 mx-auto" style="
+  max-width: 600px;
+  background: #fff;
+  color: #000;
+  border: 2px solid #C49A6C;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+">
+
+  <!-- Hotel Logo -->
+  <div class="text-center mb-3">
+    <img src="https://i.pinimg.com/1200x/ac/08/2f/ac082f37737c8c2740e5db1f7413453d.jpg" alt="Taj Hotel Logo" style="height: 80px; margin-bottom: 10px;">
+    <h2 style="color: #C49A6C;">Taj Hotel</h2>
+    <p style="font-size: 1.2rem; color: #333;">Booking Receipt</p>
+    <hr style="border-top: 1px dashed #C49A6C;">
+  </div>
+
+  <!-- Booking Info -->
+  <p><strong>Booking ID:</strong> {{ booking_id }}</p>
+  <p><strong>Name:</strong> {{ name }}</p>
+  <p><strong>Email:</strong> {{ email }}</p>
+  <p><strong>Room Type:</strong> {{ room_type }}</p>
+  <p><strong>Guests:</strong> {{ guests }}</p>
+  <p><strong>Check-in:</strong> {{ check_in }}</p>
+  <p><strong>Check-out:</strong> {{ check_out }}</p>
+
+  <!-- Pricing -->
+  <hr style="border-top: 1px dashed #C49A6C;">
+  <h5 class="mt-3" style="color: #C49A6C;">💰 Pricing Breakdown</h5>
+  <p><strong>Room Rate:</strong> ₹{{ room_rate }}</p>
+  <p><strong>Tax (12%):</strong> ₹{{ tax }}</p>
+  <p><strong>Total:</strong> <span style="font-weight: bold;">₹{{ total }}</span></p>
+
+  <!-- QR Code -->
+  <div class="text-center mt-4">
+    <img src="https://api.qrserver.com/v1/create-qr-code/?data={{ booking_id }}&size=120x120" alt="QR Code">
+    <p style="font-size: 0.8rem; color: #555;">Scan to verify booking</p>
+  </div>
+
+  <hr style="border-top: 1px dashed #C49A6C;">
+  <p class="text-end" style="font-size: 0.9rem; color: #777;">Issued on: {{ today_date|default:"Now" }}</p>
+</div>
+
+
+
+
+
+<style>
+  .receipt-box {
+    background-color: #1a1a1a;
+    border: 2px solid #C49A6C;
+    color: #f5f5f5;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .receipt-box h4 {
+    color: #FFD700;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  .receipt-box p {
+    margin: 8px 0;
+    font-size: 1rem;
+  }
+
+  .receipt-box strong {
+    color: #FFD700;
+  }
+
+  .btn-gold {
+    background-color: #C49A6C;
+    border: none;
+    color: #0F0F0F;
+    padding: 10px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+
+  .btn-gold:hover {
+    background-color: #FFD700;
+    color: #000;
+  }
+</style>
+
+
+
+
+<div class="text-center">
+  <button class="btn btn-gold mt-3" onclick="downloadReceipt()">Download Receipt 📥</button>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script>
+  function downloadReceipt() {
+    html2canvas(document.getElementById('receipt')).then(canvas => {
+      const link = document.createElement('a');
+      link.download = 'booking_receipt.png';
+      link.href = canvas.toDataURL();
+      link.click();
+    });
+  }
+</script>
+
+
+
+
+
+
+
+{% endblock %}

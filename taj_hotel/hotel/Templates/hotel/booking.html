@@ -1,0 +1,74 @@
+{% extends 'hotel/base.html' %}
+{% load static %}
+{% block content %}
+
+<h2 data-aos="fade-up">🗓️ Book Your Stay</h2>
+
+<form method="POST" data-aos="fade-up" data-aos-delay="200" class="booking-form mx-auto" style="max-width: 600px;">
+  {% csrf_token %}
+  
+  <div class="mb-3">
+    <label for="id_name" class="form-label">Full Name</label>
+    <input type="text" name="name" id="id_name" class="form-control" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="id_email" class="form-label">Email Address</label>
+    <input type="email" name="email" id="id_email" class="form-control" required>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <label for="id_checkin" class="form-label">Check-in</label>
+      <input type="text" name="check_in" id="id_checkin" class="form-control flatpickr" required placeholder="Select check-in date">
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="id_checkout" class="form-label">Check-out</label>
+      <input type="text" name="check_out" id="id_checkout" class="form-control flatpickr" required placeholder="Select check-out date">
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="id_room_type" class="form-label">Room Type</label>
+    <select name="room_type" id="id_room_type" class="form-select" required>
+      <option value="">Select Room</option>
+      <option>Deluxe Room</option>
+      <option>Executive Room</option>
+      <option>Royal Suite</option>
+      <option>Premium Room</option>
+      <option>Twin Deluxe</option>
+      <option>Family Room</option>
+      <option>Imperial Suite</option>
+      <option>Sea View Room</option>
+      <option>Garden Villa</option>
+      <option>Presidential Suite</option>
+    </select>
+  </div>
+
+  <div class="mb-3">
+    <label for="id_guests" class="form-label">Guests</label>
+    <input type="number" name="guests" id="id_guests" min="1" max="10" class="form-control" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="id_requests" class="form-label">Special Requests</label>
+    <textarea name="requests" id="id_requests" rows="3" class="form-control" placeholder="e.g. Extra pillows, sea-facing room..."></textarea>
+  </div>
+
+  <div class="text-center">
+    <button type="submit" class="btn btn-gold px-5 py-2">Book Now</button>
+  </div>
+</form>
+
+<!-- Include Flatpickr -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script>
+  flatpickr(".flatpickr", {
+    minDate: "today",
+    dateFormat: "Y-m-d",
+    disableMobile: "true"
+  });
+</script>
+
+{% endblock %}

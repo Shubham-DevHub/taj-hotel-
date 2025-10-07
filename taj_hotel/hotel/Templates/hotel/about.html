@@ -1,0 +1,145 @@
+{% extends 'hotel/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container py-5">
+
+  <!-- About Section -->
+  <div class="row align-items-center g-5" data-aos="fade-up">
+    <div class="col-md-6">
+      <img src="https://i.pinimg.com/1200x/97/e5/81/97e581e222ae7b92576046f0fa61f1d3.jpg" alt="Taj Hotel" class="img-fluid rounded shadow border border-warning border-2">
+    </div>
+    <div class="col-md-6">
+      <h2 class="mb-3 text-warning">About Taj Hotel</h2>
+      <p class="fs-5 text-light-emphasis">Luxury, Heritage, and Exceptional Service — Since 1903</p>
+      <div class="mt-4">
+        <h5 class="text-light"><i class="bi bi-clock-history me-2 text-warning"></i> Our History</h5>
+        <p class="text-muted">
+          Founded in 1903, the Taj Hotel is a symbol of India's rich hospitality and cultural legacy. Located in Mumbai, we have proudly welcomed world leaders, royalty, and global celebrities for over a century.
+        </p>
+
+        <h5 class="text-light mt-4"><i class="bi bi-bullseye me-2 text-warning"></i> Our Mission</h5>
+        <p class="text-muted">
+          To deliver exceptional service rooted in Indian tradition while blending classic architecture with modern luxury for unforgettable guest experiences.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Highlights Section -->
+  <div class="row text-center mt-5" data-aos="fade-up">
+    <div class="col-md-4 mb-4">
+      <i class="bi bi-stars text-warning" style="font-size: 2rem;"></i>
+      <h5 class="text-light mt-2">5-Star Experience</h5>
+      <p class="text-muted">World-class service with unmatched luxury and comfort.</p>
+    </div>
+    <div class="col-md-4 mb-4">
+      <i class="bi bi-geo-alt text-warning" style="font-size: 2rem;"></i>
+      <h5 class="text-light mt-2">Prime Location</h5>
+      <p class="text-muted">Located in the heart of Mumbai near iconic landmarks.</p>
+    </div>
+    <div class="col-md-4 mb-4">
+      <i class="bi bi-globe2 text-warning" style="font-size: 2rem;"></i>
+      <h5 class="text-light mt-2">Global Recognition</h5>
+      <p class="text-muted">Awarded globally for excellence in hospitality and service.</p>
+    </div>
+  </div>
+
+  <!-- Our Values -->
+  <div class="mt-5" data-aos="fade-up" data-aos-delay="100">
+    <h3 class="text-warning mb-4 text-center"><i class="bi bi-gem me-2"></i>Our Core Values</h3>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item bg-transparent text-light border-bottom">👑 Guest First – Every decision we make revolves around our guests' comfort and satisfaction.</li>
+      <li class="list-group-item bg-transparent text-light border-bottom">💼 Excellence – We strive for the highest standards in every service and facility.</li>
+      <li class="list-group-item bg-transparent text-light border-bottom">🌿 Sustainability – Committed to eco-friendly practices and community support.</li>
+    </ul>
+  </div>
+
+  <!-- Why Choose Us -->
+  <div class="mt-5" data-aos="fade-up">
+    <h3 class="text-warning mb-4 text-center"><i class="bi bi-heart-pulse me-2"></i>Why Choose Us</h3>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="p-3 bg-dark rounded shadow-sm border-start border-warning border-3">
+          <h6 class="text-light">Personalized Services</h6>
+          <p class="text-muted">From curated dining experiences to personalized spa treatments, we tailor everything to your preferences.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="p-3 bg-dark rounded shadow-sm border-start border-warning border-3">
+          <h6 class="text-light">Elegant Architecture</h6>
+          <p class="text-muted">A blend of colonial charm and contemporary luxury across our iconic property.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Team Section -->
+  <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="200">
+    <h3 class="text-warning mb-4"><i class="bi bi-people-fill me-2"></i>Meet Our Team</h3>
+    <div class="row justify-content-center g-4">
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card text-center border-0 bg-transparent">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rajesh Sharma" class="rounded-circle shadow mb-3 border border-warning border-2" width="100">
+          <div class="card-body">
+            <h6 class="text-light">Rajesh Sharma</h6>
+            <p class="text-muted small">General Manager</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card text-center border-0 bg-transparent">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Priya Desai" class="rounded-circle shadow mb-3 border border-warning border-2" width="100">
+          <div class="card-body">
+            <h6 class="text-light">Priya Desai</h6>
+            <p class="text-muted small">Guest Relations</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card text-center border-0 bg-transparent">
+          <img src="https://randomuser.me/api/portraits/men/76.jpg" alt="Ali Khan" class="rounded-circle shadow mb-3 border border-warning border-2" width="100">
+          <div class="card-body">
+            <h6 class="text-light">Ali Khan</h6>
+            <p class="text-muted small">Head Chef</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonials Section -->
+  <div class="mt-5" data-aos="fade-up" data-aos-delay="100">
+    <h3 class="text-warning mb-4 text-center"><i class="bi bi-chat-square-quote me-2"></i>What Our Guests Say</h3>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="bg-dark rounded p-3 shadow-sm">
+          <p class="text-muted fst-italic">“A royal experience! From the luxurious rooms to the food and service — 10/10!”</p>
+          <h6 class="text-light mb-0">— Aditi Mehra</h6>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="bg-dark rounded p-3 shadow-sm">
+          <p class="text-muted fst-italic">“The hospitality and location are unmatched. We’ll definitely return!”</p>
+          <h6 class="text-light mb-0">— John Peterson</h6>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="bg-dark rounded p-3 shadow-sm">
+          <p class="text-muted fst-italic">“Great blend of heritage and modern comfort. Worth every penny.”</p>
+          <h6 class="text-light mb-0">— Fatima Qureshi</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Awards Section -->
+  <div class="mt-5 text-center" data-aos="zoom-in">
+    <h3 class="text-warning mb-4"><i class="bi bi-trophy me-2"></i>Awards & Recognition</h3>
+    <p class="text-muted">🏆 Best Heritage Hotel – India Travel Awards 2024</p>
+    <p class="text-muted">🏆 Global Luxury Hotel of the Year – International Hospitality Awards</p>
+    <p class="text-muted">🏆 Excellence in Customer Service – Forbes Travel Guide</p>
+  </div>
+
+</div>
+{% endblock %}

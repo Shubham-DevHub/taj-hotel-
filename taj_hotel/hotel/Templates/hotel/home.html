@@ -1,0 +1,125 @@
+{% extends 'hotel/base.html' %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<div class="position-relative overflow-hidden text-white text-center" style="height: 80vh; background: url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1400&q=80') no-repeat center center / cover;">
+  <div class="d-flex flex-column justify-content-center align-items-center h-100 bg-dark bg-opacity-50" data-aos="fade-in">
+    <h1 class="display-4 fw-bold" data-aos="fade-up" data-aos-delay="200">Taj Hotel</h1>
+    <p class="lead" data-aos="fade-up" data-aos-delay="400">Redefining Luxury Hospitality</p>
+    <a href="/booking/" class="btn btn-warning btn-lg mt-2" data-aos="zoom-in" data-aos-delay="600">Book Now</a>
+  </div>
+</div>
+
+<!-- Booking Quick Bar -->
+<div class="container bg-light p-4 rounded shadow mt-4" data-aos="fade-up">
+  <form class="row g-3 align-items-center justify-content-center">
+    <div class="col-md-3" data-aos="fade-right" data-aos-delay="100">
+      <label for="checkin" class="form-label">Check-In</label>
+      <input type="date" id="checkin" class="form-control">
+    </div>
+    <div class="col-md-3" data-aos="fade-right" data-aos-delay="200">
+      <label for="checkout" class="form-label">Check-Out</label>
+      <input type="date" id="checkout" class="form-control">
+    </div>
+    <div class="col-md-2" data-aos="fade-right" data-aos-delay="300">
+      <label for="guests" class="form-label">Guests</label>
+      <select id="guests" class="form-select">
+        <option>1</option><option>2</option><option>3</option><option>4+</option>
+      </select>
+    </div>
+    <div class="col-md-2 d-flex align-items-end" data-aos="zoom-in" data-aos-delay="400">
+      <a href="/booking/" class="btn btn-primary w-100">Check Availability</a>
+    </div>
+  </form>
+</div>
+
+<!-- Hotel Features -->
+<div class="container text-center my-5" data-aos="fade-up">
+  <h2 class="text-center mb-4">🌟 Our Highlights</h2>
+  <div class="row text-center">
+    <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+      <i class="bi bi-house-fill" style="font-size: 2rem; color: royalblue;"></i>
+      <p class="mt-2">Elegant Rooms</p>
+    </div>
+    <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+      <i class="bi bi-cup-hot" style="font-size: 2rem; color: seagreen;"></i>
+      <p class="mt-2">Gourmet Dining</p>
+    </div>
+    <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+      <i class="bi bi-flower3" style="font-size: 2rem; color: mediumvioletred;"></i>
+      <p class="mt-2">Luxury Spa</p>
+    </div>
+    <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="400">
+      <i class="bi bi-wifi" style="font-size: 2rem; color: deepskyblue;"></i>
+      <p class="mt-2">Free Wi-Fi</p>
+    </div>
+  </div>
+</div>
+
+<!-- Image Gallery -->
+<div class="container my-5">
+  <h2 class="text-center mb-4" data-aos="fade-down">🖼️ Our Spaces</h2>
+  <div class="row text-center">
+    <div class="col-md-4 mb-4" data-aos="zoom-in">
+      <div class="card shadow">
+        <img src="http://www.travelmango.in/wp-content/uploads/2017/12/lobby-red-sofa-1-1024x448.jpg" class="card-img-top" alt="Luxury Lobby">
+        <div class="card-body">
+          <h5 class="card-title">Luxury Lobby</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
+      <div class="card shadow">
+        <img src="https://tse2.mm.bing.net/th/id/OIP._V5SOnCCDBxZEll_RMBocQHaDt?pid=Api&P=0&h=180" class="card-img-top" alt="Deluxe Room">
+        <div class="card-body">
+          <h5 class="card-title">Deluxe Room</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
+      <div class="card shadow">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.2ykONTDfwGBuo4RUo0Jq4QHaEH?pid=Api&P=0&h=180" class="card-img-top" alt="Pool View">
+        <div class="card-body">
+          <h5 class="card-title">Pool View</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- About Section -->
+<div class="container my-5 text-center">
+  <h2 data-aos="fade-up">🏛️ About Taj Hotel</h2>
+  <p class="lead mt-3" data-aos="fade-up" data-aos-delay="200">
+    The Taj Hotel blends timeless elegance with modern luxury. From opulent rooms to gourmet cuisine and tranquil spa experiences, we deliver royalty to your every stay.
+  </p>
+</div>
+
+<!-- Testimonials -->
+<div class="container my-5" data-aos="fade-up">
+  <h2 class="text-center mb-4">💬 What Our Guests Say</h2>
+  <div class="row">
+    <div class="col-md-6" data-aos="fade-right" data-aos-delay="100">
+      <blockquote class="blockquote bg-light p-4 rounded shadow-sm">
+        <p>“The Taj is simply magical. The ambiance, service, and food were all top-notch!”</p>
+        <footer class="blockquote-footer">Arjun Patel</footer>
+      </blockquote>
+    </div>
+    <div class="col-md-6" data-aos="fade-left" data-aos-delay="200">
+      <blockquote class="blockquote bg-light p-4 rounded shadow-sm">
+        <p>“Felt like royalty from the moment I walked in. Highly recommended!”</p>
+        <footer class="blockquote-footer">Samantha D.</footer>
+      </blockquote>
+    </div>
+  </div>
+</div>
+
+<!-- Contact Preview -->
+<div class="bg-dark text-white text-center py-4" data-aos="fade-up">
+  <h4>📍 Taj Hotel, Mumbai</h4>
+  <p>Gmail: shelarshubham3236@gmail.com | Phone: +91 8600703236</p>
+  <a href="/contact/" class="btn btn-outline-light">Contact Us</a>
+</div>
+
+{% endblock %}

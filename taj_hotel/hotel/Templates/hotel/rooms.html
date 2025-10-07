@@ -1,0 +1,133 @@
+{% extends 'hotel/base.html' %}
+{% block content %}
+
+<h2 class="text-center my-4" data-aos="fade-down">🛏️ Our Rooms</h2>
+<div class="row justify-content-center">
+
+  {% comment "Room cards with AOS animation staggered by delay" %}
+  {% for i in rooms %}
+  <div class="col-md-4 col-lg-3 mb-4" data-aos="zoom-in" data-aos-delay="{{ forloop.counter0|add:"1"|mul:100 }}">
+    <div class="card h-100 shadow">
+      <img src="{{ i.image_url }}" class="card-img-top" alt="{{ i.title }}">
+      <div class="card-body">
+        <h5 class="card-title">{{ i.title }}</h5>
+        <p class="card-text">{{ i.description }}</p>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+  {% endcomment %}
+
+  <!-- Room 1 -->
+  <div class="col-md-4 col-lg-3 mb-4" data-aos="zoom-in">
+    <div class="card h-100 shadow">
+      <img src="https://i.pinimg.com/1200x/74/1c/86/741c867468b505e18ed10f68e2faea79.jpg" class="card-img-top" alt="Deluxe Room">
+      <div class="card-body">
+        <h5 class="card-title">Deluxe Room</h5>
+        <p class="card-text">Luxury with comfort. $150/night</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Room 2 -->
+  <div class="col-md-4 col-lg-3 mb-4" data-aos="zoom-in" data-aos-delay="100">
+    <div class="card h-100 shadow">
+      <img src="https://i.pinimg.com/1200x/73/14/d2/7314d2a68cd1ab2764317d9ffc6e0ead.jpg" class="card-img-top" alt="Executive Room">
+      <div class="card-body">
+        <h5 class="card-title">Executive Room</h5>
+        <p class="card-text">Spacious & serene. $220/night</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Room 3 -->
+  <div class="col-md-4 col-lg-3 mb-4" data-aos="zoom-in" data-aos-delay="200">
+    <div class="card h-100 shadow">
+      <img src="https://i.pinimg.com/736x/89/35/0e/89350e95d41f97a070dbb11b84a9ebcd.jpg" class="card-img-top" alt="Royal Suite">
+      <div class="card-body">
+        <h5 class="card-title">Royal Suite</h5>
+        <p class="card-text">Top-tier elegance. $350/night</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Room 4 -->
+  <div class="col-md-4 col-lg-3 mb-4" data-aos="zoom-in" data-aos-delay="300">
+    <div class="card h-100 shadow">
+      <img src="https://i.pinimg.com/736x/40/4c/c9/404cc9bc7e78e721c0eafa3fe1e1ade6.jpg" class="card-img-top" alt="Premium Room">
+      <div class="card-body">
+        <h5 class="card-title">Premium Room</h5>
+        <p class="card-text">High-end design. $180/night</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Room 5 -->
+  <div class="col-md-4 col-lg-3 mb-4" data-aos="zoom-in" data-aos-delay="400">
+    <div class="card h-100 shadow">
+      <img src="https://i.pinimg.com/736x/72/ec/e6/72ece63a0590cdd4399994e8d4ed354d.jpg" class="card-img-top" alt="Twin Deluxe">
+      <div class="card-body">
+        <h5 class="card-title">Twin Deluxe</h5>
+        <p class="card-text">Perfect for friends. $160/night</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Room 6 -->
+  <div class="col-md-4 col-lg-3 mb-4" data-aos="zoom-in" data-aos-delay="500">
+    <div class="card h-100 shadow">
+      <img src="https://i.pinimg.com/736x/20/1c/b8/201cb811d218e2237b8b16f590ca4075.jpg" class="card-img-top" alt="Family Room">
+      <div class="card-body">
+        <h5 class="card-title">Family Room</h5>
+        <p class="card-text">Spacious for 4. $250/night</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Room 7 -->
+  <div class="col-md-4 col-lg-3 mb-4" data-aos="zoom-in" data-aos-delay="600">
+    <div class="card h-100 shadow">
+      <img src="https://i.pinimg.com/736x/f9/38/69/f93869aa3fdd83431505a7e03487e578.jpg" class="card-img-top" alt="Imperial Suite">
+      <div class="card-body">
+        <h5 class="card-title">Imperial Suite</h5>
+        <p class="card-text">Ultimate luxury. $500/night</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Room 8 -->
+  <div class="col-md-4 col-lg-3 mb-4" data-aos="zoom-in" data-aos-delay="700">
+    <div class="card h-100 shadow">
+      <img src="https://i.pinimg.com/1200x/5e/e1/db/5ee1dbaf2d2bd35010ff264830933837.jpg" class="card-img-top" alt="Sea View Room">
+      <div class="card-body">
+        <h5 class="card-title">Sea View Room</h5>
+        <p class="card-text">Ocean-facing. $300/night</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Room 9 -->
+  <div class="col-md-4 col-lg-3 mb-4" data-aos="zoom-in" data-aos-delay="800">
+    <div class="card h-100 shadow">
+      <img src="https://i.pinimg.com/736x/e9/3e/e7/e93ee76b61db679c77193dfa7f33d9c8.jpg" class="card-img-top" alt="Garden Villa">
+      <div class="card-body">
+        <h5 class="card-title">Garden Villa</h5>
+        <p class="card-text">Peaceful nature vibe. $280/night</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Room 10 -->
+  <div class="col-md-4 col-lg-3 mb-4" data-aos="zoom-in" data-aos-delay="900">
+    <div class="card h-100 shadow">
+      <img src="https://i.pinimg.com/736x/21/ed/e8/21ede80012cc0596eff8a2c455889fb4.jpg" class="card-img-top" alt="Presidential Suite">
+      <div class="card-body">
+        <h5 class="card-title">Presidential Suite</h5>
+        <p class="card-text">Elite experience. $1000/night</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}
