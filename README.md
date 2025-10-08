@@ -1,1 +1,2 @@
-# taj-hotel-
+Taj Hotel Clone Website
+This project is a responsive, front-end clone of the Taj Hotel website created for educational and portfolio purposes. It replicates key sections such as the homepage, rooms listing, room details, and booking flow, focusing on UI/UX design, responsive layout, and component-based architecture. The project uses mock data to simulate bookings and payments and is not affiliated with or endorsed by Taj Hotels. It serves as a practice project to demonstrate web development skills, including modern front-end frameworks, styling, and accessibility best practices.
